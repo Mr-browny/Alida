@@ -426,7 +426,8 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 /* ======= Header and Content */
 .al-header{
     text-align: center;
-    margin: 50px auto
+    margin: 50px auto;
+    width: 90%;
 }
 .al-content{
     width: 100%;
@@ -654,7 +655,9 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
         display: block;
     }
     /* ========= Navigation Bar Layout */
-
+    .al-text-h2{
+        font-size: 2em;
+    }
 
 }
 @media screen and (max-width: 950px) {
