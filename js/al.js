@@ -14,6 +14,7 @@ function getDOMElement(ele) {
     return document.querySelector(ele)
 }
 
+const body = getDOMElement('body');
 const navBtn = getDOMElement('#al-nav-menu')
 const sideNav = getDOMElement('.al-side-nav')
 const sideNavMenu = getDOMElement('#al-side-nav-content')
@@ -23,9 +24,11 @@ function openCloseNav(){
     if (sideNav.offsetWidth == '0') {
         sideNav.style.width = '100%'
         sideNavMenu.style.left = '0'
+        body.style.overflow = 'hidden';
     } else {
         sideNav.style.width = '0'
         sideNavMenu.style.left = '-75%'
+        body.style.overflow = '';
 
     }
 }
