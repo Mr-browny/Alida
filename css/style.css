@@ -396,11 +396,33 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 
 
 /* ========= Card ======== */
+.al-why-card,
 .al-card{
     border-radius: 5px;
+    box-sizing: border-box;
+}
+.al-card{
     box-shadow: 1px 1px 6px 1px gray;
     padding: 10px;
-    box-sizing: border-box;
+}
+.al-why-card{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.288);
+}
+.al-why-card .al-content{
+    padding: 49px;
+    font-size: 14px;
+}
+.al-why-card .al-content .al-title{
+    font-size: 27px;
+}
+.al-card-img{
+    width: 100%;
+}
+.al-card-img img{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 240px;
 }
 .al-card.al-flat{}
 /* ========= Card ======== */
@@ -455,6 +477,15 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     /* max-width: 80vw; */
     margin: 0 auto;
     box-sizing: border-box;
+}
+.al-content .al-title{
+    font-size: 27px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+.al-content .al-subtitle{
+    font-size: 14px;
+    color: var(--grey);
 }
 /* ======= Header and Content */
 
@@ -595,6 +626,31 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 .al-hero .al-hero-image img{
     /* cursor: url("../images/memoji/memoji-male.png"), auto; */
 }
+.al-why-alida{
+    background-color: rgba(241, 236, 236, 0.288);
+    padding: 20px 10em;
+    display: grid;
+    grid-template-columns: repeat(2, 460px);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-content: center;
+}
+.al-why-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.al-why-alida .al-why-header{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    /* font-family: ; */
+}
+.al-why-alida .al-why-content{
+    margin-top: 30px;
+    font-size: 18px;
+}
 .al-mode-of-operation{
     background-color: var(--mod-dark);
     padding: 3em 1px;
@@ -678,6 +734,24 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     }
 
 }
+@media screen and (max-width: 950px) and (max-height: 414px) {
+    .al-bg-heroImg{
+        height: 100vh;
+    }
+    .al-hero .al-hero-text{
+        top: 38%;
+    }
+}
+@media screen and (max-width: 967px) {
+    .al-why-alida{
+        padding: 10px 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .al-why-alida .al-why-header{
+        font-size: 30px;
+    }
+}
 @media screen and (max-width: 950px) {
     .al-row._hero .al-col-sm-6{
         width: 90%;
@@ -703,6 +777,9 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 }
 
 @media screen and (max-width: 716px){
+    .al-bg-heroImg{
+        background-attachment: scroll;
+    }
     .al-row._mod .al-col-sm-6,
     .al-row._hero .al-col-sm-6{
         width: 92%;
