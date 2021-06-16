@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 :root{
     --color-scheme: light dark;
-    --primary: hsl(299, 100%, 75%);
+    --primary: #0000ff;
     --secondary: hsl(203, 100%, 71%);
     --secondary-dark: hsl(203, 77%, 41%);
     --accent: hsl(25, 100%, 72%);
-    --info: hsl(143, 75%, 60%);
+    --info: #00ff80;
     --grey: hsl(0, 0%, 79%);
     --light: hsl(0, 100%, 100%);
     --dark: hsl(0, 0%, 18%);
@@ -98,8 +98,8 @@ a:visited{
 .al-btn.al-btn-secondary{ background-color: var(--secondary); }
 .al-btn.al-btn-round{ border-radius: 5em;}
 .al-btn.al-btn-rounded{ border-radius: 100%;}
-.al-btn.al-btn-outline.al-btn-primary{ border: 1px solid var(--primary); background-color: transparent; color: var(--dark);} color: var(--dark);
-.al-btn.al-btn-outline.al-btn-secondary{ border: 1px solid var(--secondary); background-color: transparent; color: var(--dark);}
+.al-btn.al-btn-outline.al-btn-primary{ border: 1px solid var(--primary); background-color: transparent; }
+.al-btn.al-btn-outline.al-btn-secondary{ border: 1px solid var(--secondary); background-color: transparent; }
 
 /* ========== Buttons ========= */
 
@@ -130,50 +130,65 @@ a:visited{
 
 
 /* ========= Navigation Bar Layout */
-nav{
+nav.al-nav-bar{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 1em;
     transition: 0.2s ease-in-out;
-}
-.al-fixed{
     position: fixed;
-    width: 100vw;
+    color: white;
+    width: 100%;
+    background-color: transparent;
+}
+nav.al-nav-bar .al-brand{
+    font-size: 30px;
+    text-align: center;
+}
+nav.al-nav-bar.al-fixed{
     top: 0;
     z-index: 1;
+    width: 100vw;
+    color: black;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.116);
+    position: fixed;
     background-color: white;
 }
-nav .al-brand img{
-    width: 70px;
-    height: 70px;
+nav.al-nav-bar.al-fixed .al-brand{
+    color: var(--secondary);
 }
-nav ul{
+nav.al-nav-bar ul{
     margin: 20px 0;
     list-style: none;
 }
-nav ul li{
+nav.al-nav-bar ul li{
     display: inline;
     margin: 0 20px;
 }
-nav ul li a{
-    color: rgb(53, 48, 48);
+nav.al-nav-bar.al-fixed ul li a{
+    color: black;
+}
+nav.al-nav-bar ul li a{
+    color: white;
     padding: 1.5em;
     text-decoration: none;
     white-space: nowrap;
     font-weight: bolder;
     transition: 0.3s all ease-in-out;
 }
-nav ul li a:hover{
+nav.al-nav-bar ul li a:hover{
     transition: 0.3s all ease-in-out;
     color: rgba(162, 151, 151, 0.782);
 }
-nav .al-nav-btn,
-nav .al-nav-apply-btn{
+nav.al-nav-bar .al-nav-btn,
+nav.al-nav-bar .al-nav-apply-btn{
     padding-top: 5px;
 }
-nav .al-nav-btn{ display: none; cursor: pointer; }
-nav .al-nav-btn .al-nav-menu{
+nav.al-nav-bar.al-fixed .al-nav-apply-btn button{
+    color: var(--dark);
+}
+nav.al-nav-bar .al-nav-btn{ display: none; cursor: pointer; }
+nav.al-nav-bar .al-nav-btn .al-nav-menu{
     border: none; 
     width: 60px;
     border-radius: 10px;
@@ -181,20 +196,20 @@ nav .al-nav-btn .al-nav-menu{
     box-shadow: 0px 0px 5px var(--dark);
     transition: 0.1s all ease;
 }
-nav .al-nav-btn .al-nav-menu:active{
+nav.al-nav-bar .al-nav-btn .al-nav-menu:active{
     transition: 0.1s all ease;
     box-shadow: 0px 0px 0px var(--dark);
 }
-nav .al-nav-btn .al-nav-menu div{
+nav.al-nav-bar .al-nav-btn .al-nav-menu div{
     cursor: pointer;
     background-color: var(--light);
     margin: 5px 2px;
     height: 5px;
     width: 100%;
 }
-nav .al-nav-btn .al-nav-menu div:nth-child(1){ width: 90%}
-nav .al-nav-btn .al-nav-menu div:nth-child(2){ width: 70%}
-nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
+nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(1){ width: 90%}
+nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(2){ width: 70%}
+nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 
 /* Side Nav */
 .al-side-nav-openClose{
@@ -222,6 +237,7 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     width: 75%;
     height: 100vh;
     position: fixed;
+    overflow-y: auto;
     top: 0;
     left: -75%;
     transition: 0.3s;
@@ -307,16 +323,16 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     /* cursor: url("../images/memoji/memoji-male.png"), auto; */
 }
 .al-row._mod .al-col-sm-6 > img.accept:hover{
-    cursor: url("../images/memoji/memoji-female.png"), auto;
+    /* cursor: url("../images/memoji/memoji-female.png"), auto; */
 }
 .al-row._mod .al-col-sm-6 > img.code:hover{
-    cursor: url("../images/memoji/memoji-dev.png"), auto;
+    /* cursor: url("../images/memoji/memoji-dev.png"), auto; */
 }
 .al-row._mod .al-col-sm-6 > img.build:hover{
-    cursor: url("../images/memoji/memoji-muslim.png"), auto;
+    /* cursor: url("../images/memoji/memoji-muslim.png"), auto; */
 }
 .al-row._mod .al-col-sm-6 > img.pay:hover{
-    cursor: url("../images/memoji/memoji-shocked.png"), auto;
+    /* cursor: url("../images/memoji/memoji-shocked.png"), auto; */
 }
 .al-row .al-col-sm-6 .al-vertical{
     position: relative;
@@ -380,11 +396,33 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 
 
 /* ========= Card ======== */
+.al-why-card,
 .al-card{
     border-radius: 5px;
+    box-sizing: border-box;
+}
+.al-card{
     box-shadow: 1px 1px 6px 1px gray;
     padding: 10px;
-    box-sizing: border-box;
+}
+.al-why-card{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.288);
+}
+.al-why-card .al-content{
+    padding: 49px;
+    font-size: 14px;
+}
+.al-why-card .al-content .al-title{
+    font-size: 27px;
+}
+.al-card-img{
+    width: 100%;
+}
+.al-card-img img{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 240px;
 }
 .al-card.al-flat{}
 /* ========= Card ======== */
@@ -413,13 +451,17 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     transform: translateY(-50%) translateX(-50%);
 }
 .al-accordion .al-accordion-body{
-    background-color: red;
     display: none;
+
 }
 .al-icon-md{
     font-size: 40px;
     font-weight: thin;
     padding-right: 10px;
+}
+#curriculum input[type=checkbox]:checked ~ .al-accordion-body{
+    display: block;
+    transition: 0.8s all ease-in;
 }
 /* ========= Accordion ======== */
 
@@ -435,6 +477,15 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     /* max-width: 80vw; */
     margin: 0 auto;
     box-sizing: border-box;
+}
+.al-content .al-title{
+    font-size: 27px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+.al-content .al-subtitle{
+    font-size: 14px;
+    color: var(--grey);
 }
 /* ======= Header and Content */
 
@@ -535,14 +586,6 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 }
 /* ============ Form Designs */
 
-/* Dark Mode */
-@media screen and (prefers-color-scheme: light) {
-    body {
-        background-color: var(--dark);
-        color: var(--light);
-    }
-}
-
 
 /* ================================= */
 /* ================================= */
@@ -550,19 +593,25 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 /* ========= Page Section/Div Styling ========== */
 /* ================================= */
 /* ================================= */
+.al-bg-heroImg,
 .al-bg-linkImg{
-    background-image: url('../images/link.jpg');
-    background-color: var(--dark);
-    /* background-blend-mode:  color-dodge; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 80vh;
+}
+.al-bg-heroImg{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.281);
+    background-blend-mode:  darken;
+    background-image: url('../images/hero.png');
+}
+.al-bg-linkImg{
+    background-image: url('../images/link.jpg');
 }
 .al-hero{
     width: 100%;
-    max-width: 1500px;
-    /* max-width: 80vw; */
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -575,7 +624,32 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     transform: translateY(-50%) translateX(-50%);
 }
 .al-hero .al-hero-image img{
-    cursor: url("../images/memoji/memoji-male.png"), auto;
+    /* cursor: url("../images/memoji/memoji-male.png"), auto; */
+}
+.al-why-alida{
+    background-color: rgba(241, 236, 236, 0.288);
+    padding: 20px 10em;
+    display: grid;
+    grid-template-columns: repeat(2, 460px);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-content: center;
+}
+.al-why-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.al-why-alida .al-why-header{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    /* font-family: ; */
+}
+.al-why-alida .al-why-content{
+    margin-top: 30px;
+    font-size: 18px;
 }
 .al-mode-of-operation{
     background-color: var(--mod-dark);
@@ -585,7 +659,7 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     padding: 3em 1px 3em 1px;
 }
 .al-timeline{
-    padding: 3em 1px;
+    padding: 2em 1px;
     background-color: rgba(226, 226, 226, 0.59);
 }
 .al-timeline .al-content .al-card .al-row.al-justify-between .line-break{
@@ -640,17 +714,17 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 
 @media screen and (max-width: 1118px) {
    /* ========= Navigation Bar Layout */
-    nav{
+    nav.al-nav-bar {
         justify-content: space-between;
     }
-    nav ul{
+    nav.al-nav-bar  ul{
         display: none;
     }
-    nav .al-nav-apply-btn{
+    nav.al-nav-bar  .al-nav-apply-btn{
         padding-top: 0px;
         display: none;
     }
-    nav .al-nav-btn{
+    nav.al-nav-bar  .al-nav-btn{
         padding-top: 5px;
         display: block;
     }
@@ -660,7 +734,32 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     }
 
 }
+@media screen and (max-width: 950px) and (max-height: 414px) {
+    .al-bg-heroImg{
+        height: 100vh;
+    }
+    .al-hero .al-hero-text{
+        top: 38%;
+    }
+}
+@media screen and (max-width: 967px) {
+    .al-why-alida{
+        padding: 10px 2em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .al-why-alida .al-why-header{
+        font-size: 30px;
+    }
+}
 @media screen and (max-width: 950px) {
+    .al-row._hero .al-col-sm-6{
+        width: 90%;
+    }
+    .al-row._hero .al-col-sm-6 .al-hero-text{
+        font-size: 10px;
+        /* width: 10px; */
+    }
     .al-row._mod .al-col-sm-6{
         height: 400px;
     }
@@ -678,6 +777,9 @@ nav .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 }
 
 @media screen and (max-width: 716px){
+    .al-bg-heroImg{
+        background-attachment: scroll;
+    }
     .al-row._mod .al-col-sm-6,
     .al-row._hero .al-col-sm-6{
         width: 92%;

@@ -9,13 +9,14 @@
     <!-- <meta name="color-scheme" content="dark light"> -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="icon" href="images/alida-logo.png" sizes="192x192" />
-    <title>Alida - Accueil</title>
+    <title>Alida School</title>
 </head>
 <body>
     <div class="al-wrapper">
         <nav class="al-nav-bar">
             <div class="al-brand">
-                <img src="images/alida-logo.png" alt="Alida Image" width="30px" />
+                <div> Alida </div>
+                <div> School </div>
             </div>
             <ul>
                 <li>
@@ -35,7 +36,7 @@
                 </li>
             </ul>
             <div class="al-nav-apply-btn">
-                <button class="al-btn al-btn-primary al-btn-outline al-btn-round al-text-dark al-pt-lg al-pb-lg" title=""> Apply Now </button>
+                <button class="al-btn al-btn-primary al-btn-outline al-text-light al-pt-lg al-pb-lg" title="Apply Now"> Apply Now </button>
             </div>
             <div class="al-nav-btn al-mr-lg al-pr-lg">
                 <button class="al-nav-menu al-bg-secondary" id="al-nav-menu" >
@@ -67,7 +68,7 @@
                 </ul>
             </div>
         </div>
-        <div class="al-hero al-bg-linkImg">
+        <div class="al-hero al-bg-heroImg">
             <div class="al-row _hero">
                 <div class="al-col-sm-6">
                     <div class="al-hero-text">
@@ -86,9 +87,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="al-col-sm-6">
-                    <div class="al-hero-image al-text-center">
-                        <img src="images/hero.png" alt="hero-image" width="100%" height="600px" />
+            </div>
+        </div>
+        <div class="al-why-alida">
+            <div class="al-why-container">
+                <div class="al-why-header al-text-secondary">Training the next generation of tech talent in Africa </div>
+                <div class="al-why-content">
+                    Alida School is a technology and future skills school that trains aspiring tech professionals with industry-ready skills required for the fast-moving tech sector.
+                </div>
+            </div>
+            <div>
+                <div class="al-why-card">
+                    <div class="al-card-img">
+                        <img src="images/learn.jpeg" alt="tech image" />
+                    </div>
+                    <div class="al-content">
+                        <div class="al-title"> Learn the employability skills that matter </div>
+                        <div class="al-subtitle"> Each program is developed to fill a demand in today’s booming tech industry. You’ll learn practical skills that make you more valuable and attractive to companies. </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="al-why-card">
+                    <div class="al-card-img">
+                        <img src="images/coding.jpeg" alt="tech image" />
+                    </div>
+                    <div class="al-content">
+                        <div class="al-title"> Coding courses created by technologists and  computer scientists </div>
+                        <div class="al-subtitle"> All of our courses are created, delivered and updated by experts working in the tech industry. You’ll always be learning the most up-to-date industry standards and best practices. </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="al-why-card">
+                    <div class="al-card-img">
+                        <img src="images/career.jpeg" alt="tech image" />
+                    </div>
+                    <div class="al-content">
+                        <div class="al-title"> Exciting African and Global Tech Career Pathways </div>
+                        <div class="al-subtitle"> Our interests are 100% aligned and we only succeed when you do, so you don't need to worry about navigating the job market alone. We’ll connect you to our network of hiring partners to help you find the right job. </div>
                     </div>
                 </div>
             </div>
@@ -117,12 +154,12 @@
                         </div>
                     </div>
                     <div class="al-col-sm-6 al-text-center">
-                        <img class="accept" src="images/accept.png" alt="Image" width="100%" />
+                        <img class="accept" src="images/accept.jpeg" alt="Image" width="100%" />
                     </div>
                 </div>
                 <div class="al-row _mod">
                     <div class="al-col-sm-6 al-text-center">
-                        <img class="code" src="images/code.png" alt="Image" width="100%" />
+                        <img class="code" src="images/code.jpeg" alt="Image" width="100%" />
                     </div>
                     <div class="al-col-sm-6">
                         <div class="al-vertical">
@@ -155,12 +192,12 @@
                         </div>
                     </div>
                     <div class="al-col-sm-6 al-text-center">
-                        <img class="build" src="images/build.png" alt="Image" width="100%" />
+                        <img class="build" src="images/build.jpeg" alt="Image" width="100%" />
                     </div>
                 </div>
                 <div class="al-row _mod">
                     <div class="al-col-sm-6 al-text-center">
-                        <img class="pay" src="images/pay.png" alt="Image" width="100%" />
+                        <img class="pay" src="images/pay.jpeg" alt="Image" width="100%" />
                     </div>
                     <div class="al-col-sm-6">
                         <div class="al-vertical">
@@ -184,7 +221,7 @@
             <div class="al-header">
                 <div class="al-text-secondary al-text-h3 al-text-capslock"> Curriculum </div>
                 <div class="al-text-h2">
-                    Frontend technologies you'll learn
+                    Technologies you'll learn
                 </div>
             </div>
             <div class="al-content">
@@ -192,27 +229,35 @@
                     <div class="al-col-sm-6">
                         <div class="al-card">
                             <div class="al-accordion">
-                                <div class="al-accordion-header">
-                                    <div class="al-row al-justify-between">
-                                        <div class="al-before al-mr-lg">
-                                            <div class="al-num"> 1 </div>
-                                        </div>
-                                        <div>
-                                            <div class="al-text-h4"> Hyper-text markup Language (HTML) </div>
-                                            <div class="al-text-subtitle al-text-grey al-mt-xs">
-                                                <div>
-                                                    Build web pages with tags and elements.
+                                <!-- I want to use a sibling selector -->
+                                <input type="checkbox" hidden  id="html" />
+                                <label for="html">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 1 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> Web Development Fundamentals </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Build web pages with tags and elements.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="al-pl-lg al-pt-lg">
-                                        <span class="al-icon-md"> &#711; </span>
-                                    </div>
-                                </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                                <span class="al-icon-md"> &#711; </span>
+                                            </div>
+                                        </div>
+                                </label>
                                 <div class="al-accordion-body al-mt-md">
                                     <div class="al-chips">
-                                        <span class="al-chip"> Getting started with HTML </span>
+                                        <span class="al-chip"> HTML </span>
+                                        <span class="al-chip"> CSS </span>
+                                        <span class="al-chip"> Responsive web design </span>
+                                        <span class="al-chip"> Building forms </span>
+                                        <span class="al-chip"> Git commands </span>
                                     </div>
                                 </div>
                             </div>
@@ -221,27 +266,37 @@
                     <div class="al-col-sm-6">
                         <div class="al-card al-bg-light">
                             <div class="al-accordion">
-                                <div class="al-accordion-header">
-                                    <div class="al-row al-justify-between">
-                                        <div class="al-before al-mr-lg">
-                                            <div class="al-num"> 2 </div>
-                                        </div>
-                                        <div>
-                                            <div class="al-text-h4"> Cascading Style Sheet (CSS) </div>
-                                            <div class="al-text-subtitle al-text-grey al-mt-xs">
-                                                <div>
-                                                    Learn how to style web pages like a pro
+                                <input type="checkbox" hidden  id="css" />
+                                <label for="css">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 2 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> Front End Development with JavaScript </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Learn how to style web pages like a pro
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                            <span class="al-icon-md"> &#711; </span>
+                                        </div>
                                     </div>
-                                    <div class="al-pl-lg al-pt-lg">
-                                        <span class="al-icon-md"> &#711; </span>
-                                    </div>
-                                </div>
+                                </label>
                                 <div class="al-accordion-body al-mt-md">
                                     <div class="al-chips">
-                                        <span class="al-chip"> Getting started with CSS </span>
+                                        <span class="al-chip"> Functions </span>
+                                        <span class="al-chip"> Objects </span>
+                                        <span class="al-chip"> Classes </span>
+                                        <span class="al-chip"> Modules </span>
+                                        <span class="al-chip"> Error handling </span>
+                                        <span class="al-chip"> Error handling </span>
+                                        <span class="al-chip"> Document Object Model (DOM) </span>
+                                        <span class="al-chip"> Vue.js) </span>
                                     </div>
                                 </div>
                             </div>
@@ -250,27 +305,35 @@
                     <div class="al-col-sm-6">
                         <div class="al-card al-bg-light">
                             <div class="al-accordion">
-                                <div class="al-accordion-header">
-                                    <div class="al-row al-justify-between">
-                                        <div class="al-before al-mr-lg">
-                                            <div class="al-num"> 3 </div>
-                                        </div>
-                                        <div>
-                                            <div class="al-text-h4"> Wordpress - Elementor </div>
-                                            <div class="al-text-subtitle al-text-grey al-mt-xs">
-                                                <div>
-                                                    Build a complete websites with Elementor
+                                <input type="checkbox" hidden  id="wordpress" />
+                                <label for="wordpress">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 3 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> Back-end development with Nodejs </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Build a complete websites with Elementor
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                            <span class="al-icon-md"> &#711; </span>
+                                        </div>
                                     </div>
-                                    <div class="al-pl-lg al-pt-lg">
-                                        <span class="al-icon-md"> &#711; </span>
-                                    </div>
-                                </div>
+                                </label>
                                 <div class="al-accordion-body al-mt-md">
                                     <div class="al-chips">
-                                        <span class="al-chip"> Getting started with Wordpress </span>
+                                        <span class="al-chip"> Node Js </span>
+                                        <span class="al-chip"> Express and MongoDB </span>
+                                        <span class="al-chip"> Authentication </span>
+                                        <span class="al-chip"> APIs </span>
+                                        <span class="al-chip"> Testing Express </span>
+                                        <span class="al-chip"> Final Project </span>
                                     </div>
                                 </div>
                             </div>
@@ -279,56 +342,100 @@
                     <div class="al-col-sm-6">
                         <div class="al-card al-bg-light">
                             <div class="al-accordion">
-                                <div class="al-accordion-header">
-                                    <div class="al-row al-justify-between">
-                                        <div class="al-before al-mr-lg">
-                                            <div class="al-num"> 4 </div>
-                                        </div>
-                                        <div>
-                                            <div class="al-text-h4"> Git & Github </div>
-                                            <div class="al-text-subtitle al-text-grey al-mt-xs">
-                                                <div>
-                                                    Learn how to collaborate with teams
+                                <input type="checkbox" hidden  id="git" />
+                                <label for="git">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 4 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> Full Stack </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Learn how to collaborate with teams
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                            <span class="al-icon-md"> &#711; </span>
+                                        </div>
                                     </div>
-                                    <div class="al-pl-lg al-pt-lg">
-                                        <span class="al-icon-md"> &#711; </span>
-                                    </div>
-                                </div>
+                                </label>
                                 <div class="al-accordion-body al-mt-md">
                                     <div class="al-chips">
-                                        <span class="al-chip"> Getting started with Git and Github </span>
+                                        <span class="al-chip"> Front End & Back End </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="al-col-sm-12">
+                    <div class="al-col-sm-6">
                         <div class="al-card al-bg-light">
                             <div class="al-accordion">
-                                <div class="al-accordion-header">
-                                    <div class="al-row al-justify-between">
-                                        <div class="al-before al-mr-lg">
-                                            <div class="al-num"> 5 </div>
-                                        </div>
-                                        <div>
-                                            <div class="al-text-h4"> JavaScript (Js) </div>
-                                            <div class="al-text-subtitle al-text-grey al-mt-xs">
-                                                <div>
-                                                    Learn how to make your websites interactive
+                                <input type="checkbox" hidden  id="js" />
+                                <label for="js">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 5 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> App Development (iOS and Android) </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Learn how to make your websites interactive
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                            <span class="al-icon-md"> &#711; </span>
+                                        </div>
                                     </div>
-                                    <div class="al-pl-lg al-pt-lg">
-                                        <span class="al-icon-md"> &#711; </span>
-                                    </div>
-                                </div>
+                                </label>
                                 <div class="al-accordion-body al-mt-md">
                                     <div class="al-chips">
-                                        <span class="al-chip"> Getting started with JavaScript </span>
+                                        <span class="al-chip"> iPhone & Android App Development </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="al-col-sm-6">
+                        <div class="al-card al-bg-light">
+                            <div class="al-accordion">
+                                <input type="checkbox" hidden  id="vue" />
+                                <label for="vue">
+                                    <div class="al-accordion-header">
+                                        <div class="al-row al-justify-between">
+                                            <div class="al-before al-mr-lg">
+                                                <div class="al-num"> 6 </div>
+                                            </div>
+                                            <div>
+                                                <div class="al-text-h4"> Data Science </div>
+                                                <div class="al-text-subtitle al-text-grey al-mt-xs">
+                                                    <div>
+                                                        Build your Websites with cutting edge Js Frameworks.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="al-pl-lg al-pt-lg">
+                                            <span class="al-icon-md"> &#711; </span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <div class="al-accordion-body al-mt-md">
+                                    <div class="al-chips">
+                                        <span class="al-chip"> Foundations of Data Science </span>
+                                        <span class="al-chip"> Python Programming </span>
+                                        <span class="al-chip">  Advanced Data Mining and Web Scraping with BeautifulSoup and Selenium </span>
+                                        <span class="al-chip"> Data Visualization with NumPy & Pandas </span>
+                                        <span class="al-chip"> Statistical Modelling </span>
+                                        <span class="al-chip"> Data Exploration using Jupyter Notebooks </span>
+                                        <span class="al-chip"> Linear Regression </span>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +585,7 @@
         <footer class="al-bg-mod-dark al-text-light">
             <div class="al-text-center al-pa-lg">
                 &#169; <span id="current_date">2021</span>
-                Alida School | PopularFX Theme
+                Alida School | E-Learning
             </div>
         </footer>
     </div>
