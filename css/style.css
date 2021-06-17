@@ -65,6 +65,13 @@ a:visited{
 }
 /* ========== Text Formatting */
 
+/* 
+    George Ikwegbu, g.ikwegbu@gmail.com
+
+*/
+
+
+
 /* ========== Background Color Formatting */
 .al-bg-primary{ background-color: var(--primary); }
 .al-bg-secondary{ background-color: var(--secondary); }
@@ -86,6 +93,10 @@ a:visited{
     color: white;
     box-shadow: 0px 0px 5px var(--dark);
     transition: 0.1s all ease;
+}
+a.al-btn{
+    color: white;
+    text-decoration: none;
 }
 .al-btn:active{
     transition: 0.1s all ease;
@@ -182,9 +193,9 @@ nav.al-nav-bar ul li a:hover{
 }
 nav.al-nav-bar .al-nav-btn,
 nav.al-nav-bar .al-nav-apply-btn{
-    padding-top: 5px;
+    padding-top: 20px;
 }
-nav.al-nav-bar.al-fixed .al-nav-apply-btn button{
+nav.al-nav-bar.al-fixed .al-nav-apply-btn a{
     color: var(--dark);
 }
 nav.al-nav-bar .al-nav-btn{ display: none; cursor: pointer; }
@@ -341,7 +352,6 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     transform: translateY(-50%) translateX(-50%);
     width: 100%;
     max-width: 500px;
-    /* background-color: red; */
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -628,10 +638,10 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 }
 .al-why-alida{
     background-color: rgba(241, 236, 236, 0.288);
-    padding: 20px 10em;
+    /* padding: 20px 10em; */
     display: grid;
-    grid-template-columns: repeat(2, 460px);
-    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-columns: repeat(2, 460px); */
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 30px;
     justify-content: center;
@@ -664,6 +674,26 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
 }
 .al-timeline .al-content .al-card .al-row.al-justify-between .line-break{
     width: 220px;
+}
+.al-apply-now{
+    margin-top: 90px;
+    background-color: var(--dark);
+    padding: 100px;
+    position: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+.al-apply-now a{
+   color: var(--primary);
+   background-color: white;
+   width: 200px;
+   margin: 0 auto;
+   text-align: center;
+   padding: 1em;
+   font-size: 2em;
+   border-radius: 10px;
+   text-decoration: none;
 }
 .al-payment-plans{
     padding: 3em 1px;
@@ -740,6 +770,12 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     }
     .al-hero .al-hero-text{
         top: 38%;
+
+    }
+}
+@media screen and (max-height: 790px) {
+    .al-why-container{
+        padding: 10px 0em;
     }
 }
 @media screen and (max-width: 967px) {
