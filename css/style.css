@@ -637,11 +637,12 @@ nav.al-nav-bar .al-nav-btn .al-nav-menu div:nth-child(3){ width: 40%}
     /* cursor: url("../images/memoji/memoji-male.png"), auto; */
 }
 .al-why-alida{
-    background-color: rgba(241, 236, 236, 0.288);
+    background-color: rgba(237, 21, 21, 0.288);
+    /* background-color: rgba(241, 236, 236, 0.288); */
     /* padding: 20px 10em; */
-    display: grid;
     /* grid-template-columns: repeat(2, 460px); */
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-rows: auto;
     gap: 30px;
     justify-content: center;
